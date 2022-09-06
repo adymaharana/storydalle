@@ -8,6 +8,8 @@ StoryDALL-E is a model trained for the task of Story Visualization \[1\]. The mo
 
 This model has been trained using the Pororo story visualization dataset \[1\]. The data was adapted from the popular cartoon series *Pororo the Little Penguin* and originally released by \[2\]. The Pororo dataset contains 9 recurring characters, as shown below, in the decreasing order of their frequency in the training data. Most of the scenes in the occur in a snowy village, surrounded by hills, trees and houses. A few episodes are located in gardens or water bodies. All the captions are in the English language and predominantly contain verbs in the present tense.
 
+![image](pororo_characters.png)
+
 
 #### Citation:
 ```
