@@ -27,7 +27,7 @@ The model struggles to generate coherent images in the following scenarios.
 * Completely new characters based on textual descriptions.
 
 ### Ethical Considerations.
-
+Our experimental results are specific to the task of story visualization. By using cartoon images in our task, we avoid the egregious ethical issues associated with real-world usage of image generation such as DeepFakes. We focus not on generating realistic images, but on improved multi-modal understanding in the context of story visualization.
 
 ### Citation:
 ```
