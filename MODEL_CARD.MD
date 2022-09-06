@@ -19,7 +19,8 @@ This model is intended for generating visual stories containing the 9 characters
 
 Here are some examples of generated visual stories for the above-mentioned settings.
 
-![image](model_card_demo_pororo_1.png)
+[comment]: ![image](model_card_demo_pororo_1.png)
+<img src="model_card_demo_pororo_1.png" width="200">
 
 The model struggles to generate coherent images in the following scenarios.
 * Multiple characters in a frame.
