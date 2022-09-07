@@ -2,7 +2,7 @@
 
 StoryDALL-E is a model trained for the task of Story Visualization \[1\]. The model receives a sequence of captions as input and generates a corresponding sequence of images which form a visual story depicting the narrative in the captions. It is based on the [mega-dalle](https://github.com/borisdayma/dalle-mini) model and is adapted from the corresponding [PyTorch codebase](https://github.com/kuprel/min-dalle). This model has been developed for academic purposes only.
 
-\[[paper]()\]  \[[code]()\]
+\[[paper]()\]  \[[code]()\] \[[demo]()\]
 
 ### Dataset
 
@@ -56,5 +56,7 @@ Send questions or comments to adyasha@cs.unc.edu.
 \[1\] Li, Yitong, et al. "Storygan: A sequential conditional gan for story visualization." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2019.
 
 \[2\] Kim, Kyung-Min, et al. "DeepStory: video story QA by deep embedded memory networks." Proceedings of the 26th International Joint Conference on Artificial Intelligence. 2017.
+
+\[3\] Sharma, Piyush, et al. "Conceptual captions: A cleaned, hypernymed, image alt-text dataset for automatic image captioning." Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). 2018.
 
 
