@@ -36,13 +36,18 @@ Here are some examples of generated visual stories for the above-mentioned setti
 Due to the small training dataset size for story visualization, the model has poor generalization to some unseen settings. The model struggles to generate coherent images in the following scenarios.
 * Multiple characters in a frame.
 * Non-visual actions such as *compliment*.
-* Characters that are infrequent in the training dataset e.g. Rody, Harry.
-* Background locations that are not found in the cartoon e.g. a busy city.
+* Characters that are infrequent in the training dataset e.g. *Rody*, *Harry*.
+* Background locations that are not found in the cartoon e.g. *a busy city*.
 * Color-based descriptions for object.
 * Completely new characters based on textual descriptions.
 
+In summary, we find that the model performs well at visualizing stories with up to three characters across all frames and struggles at generating coherent visuals for more than three characters. 
+The model copies visual elements from the source image and copies to each of the generated frames in the story, hence maintaining a continuous flow in narration by virtue of conditioning on an initial scene. 
+StoryDALL-E performs best at generating overtly visual actions and is capable of generating semantic concepts that do not appear in the story continuation dataset, such as *doughnut* and *lion*, by leveraging the pretrained knowledge of DALL-E Mega when possible. 
+Most of the scenes in the Pororo dataset occur within the setting of a snowy village with wooden houses surrounded by trees and snow. Hence, the model usually generates scenes with similar visual elements.
+
 ### Ethical Considerations.
-Our experimental results are specific to the task of story visualization. 
+Our experimental results are specific to the task of story continuation. 
 By using cartoon images in our task, we avoid the egregious ethical issues associated with real-world usage of image generation such as DeepFakes. 
 We focus not on generating realistic images, but on improved multi-modal understanding in the context of story visualization.
 
