@@ -29,7 +29,7 @@ This model is intended for generating visual stories containing the 9 characters
         
 Here are some examples of generated visual stories for the above-mentioned settings.
 <p align="center">
-    <img src="assets/demo_pororo_good_v1.png" width="1000">
+    <img src="assets/demo_pororo_good.png" width="1000">
 </p>
         
 Due to the small training dataset size for story visualization, the model has poor generalization to some unseen settings. The model struggles to generate coherent images in the following scenarios.
