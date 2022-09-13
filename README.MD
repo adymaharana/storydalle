@@ -1,7 +1,6 @@
 ## StoryDALL-E: Adapting Pretrained Text-to-Image Transformers for Story Continuation
 
 PyTorch code for the ECCV 2022 paper "StoryDALL-E: Adapting Pretrained Text-to-Image Transformers for Story Continuation".
-Link to arXiv paper: [https://arxiv.org/abs/2105.10026](https://arxiv.org/abs/2105.10026)
 
 \[[Model Card](https://github.com/adymaharana/storydalle/blob/main/MODEL_CARD.MD)\] \[[Demo]()\]
 
