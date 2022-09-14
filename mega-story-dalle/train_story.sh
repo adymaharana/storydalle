@@ -1,16 +1,14 @@
 if [ "$1" = "pororo" ]; then
   echo "Training on Pororo"
-  DATA_DIR=/nas-ssd/adyasha/datasets/pororo_png
-  OUTPUT_ROOT=/nas-hdd/tarbucket/adyasha/models/megaDALLE/pororo
+  DATA_DIR=../data/pororo/
+  OUTPUT_ROOT=./out/pororo
   SENT_EMBED=512
   STORY_LEN=4
   LR=1e-4
   TRAIN_BS=1
   GRAD_ACC=4
-elif [ "$1" = "flintstones" ]; then
-  echo "Training on Flintstones"
-  DATA_DIR=/nas-ssd/adyasha/datasets/flintstones
-  OUTPUT_ROOT=/nas-hdd/tarbucket/adyasha/models/megaDALLE/flintstones
+  DATA_DIR=../data/flintstones
+  OUTPUT_ROOT=./out/flintstones
   SENT_EMBED=512
   STORY_LEN=4
   LR=1e-5
@@ -18,8 +16,8 @@ elif [ "$1" = "flintstones" ]; then
   GRAD_ACC=4
 elif [ "$1" = "didemo" ]; then
   echo "Training on DiDeMo"
-  DATA_DIR=/nas-ssd/adyasha/datasets/didemo
-  OUTPUT_ROOT=/nas-hdd/tarbucket/adyasha/models/megaDALLE/didemo
+  DATA_DIR=../data/didemo
+  OUTPUT_ROOT=./out/didemo
   SENT_EMBED=512
   STORY_LEN=2
   TRAIN_BS=1

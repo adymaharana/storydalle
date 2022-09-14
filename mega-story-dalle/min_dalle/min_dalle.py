@@ -64,8 +64,8 @@ class MinDalle(nn.Module):
         self.detoker_params_path = os.path.join(vqgan_path, 'detoker.pt')
         self.toker_params_path = os.path.join(vqgan_path, 'last.ckpt')
 
-        if 'pororo' in models_root:
-            self.text_vocab_count = 50283 if is_mega else 50264
+        # if 'pororo' in models_root:
+        #     self.text_vocab_count = 50283 if is_mega else 50264
 
         self.init_tokenizer()
         if is_reusable:
