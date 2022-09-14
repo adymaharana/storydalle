@@ -2,7 +2,7 @@
 
 PyTorch code for the ECCV 2022 paper "StoryDALL-E: Adapting Pretrained Text-to-Image Transformers for Story Continuation".
 
-\[[Paper](https://arxiv.org/abs/2209.06192)\] \[[Model Card](https://github.com/adymaharana/storydalle/blob/main/MODEL_CARD.MD)\] \[[Demo](https://github.com/adymaharana/storydalle/blob/main/assets/demo.pdf)\]
+\[[Paper](https://arxiv.org/abs/2209.06192)\] \[[Model Card](https://github.com/adymaharana/storydalle/blob/main/MODEL_CARD.MD)\] \[[Demo](https://github.com/adymaharana/storydalle/blob/main/DEMO.MD)\]
 
 ![image](./assets/story_dalle_predictions.png)
 
