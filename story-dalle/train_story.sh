@@ -1,7 +1,7 @@
 if [ "$1" = "pororo" ]; then
   echo "Training on Pororo"
-  DATA_DIR=/nas-ssd/adyasha/datasets/pororo_png
-  OUTPUT_ROOT=/nas-ssd/adyasha/models/minDALLEs_8_31/pororo
+  DATA_DIR=../data/pororo/
+  OUTPUT_ROOT=./out/pororo
   SENT_EMBED=512
   STORY_LEN=4
   LR=1e-4
@@ -9,31 +9,24 @@ if [ "$1" = "pororo" ]; then
   GRAD_ACC=4
 elif [ "$1" = "flintstones" ]; then
   echo "Training on Flintstones"
-  DATA_DIR=/nas-ssd/adyasha/datasets/flintstones
-  OUTPUT_ROOT=/nas-ssd/adyasha/models/minDALLEs_8_31/flintstones
+  DATA_DIR=../data/flintstones
+  OUTPUT_ROOT=./out/flintstones
   SENT_EMBED=512
   STORY_LEN=4
   LR=1e-5
   TRAIN_BS=1
   GRAD_ACC=4
-elif [ "$1" = "mpii" ]; then
-  echo "Training on MPII"
-  DATA_DIR=/nas-ssd/adyasha/datasets/mpii
-  OUTPUT_ROOT=/nas-ssd/adyasha/models/minDALLEs/mpii
-  SENT_EMBED=128
-  STORY_LEN=4
 elif [ "$1" = "didemo" ]; then
   echo "Training on DiDeMo"
-  DATA_DIR=/nas-ssd/adyasha/datasets/didemo
-  OUTPUT_ROOT=/nas-ssd/adyasha/models/minDALLEs/didemo
+  DATA_DIR=../data/didemo
+  OUTPUT_ROOT=./out/didemo
   SENT_EMBED=512
   STORY_LEN=2
   TRAIN_BS=1
   GRAD_ACC=8
 fi
 
-#--prefix_model_name_or_path './1.3B/' \
-#--model_name_or_path './1.3B/' \
+LOG_DIR=../runs/
 
 python ./train_t2i.py \
 --prefix_model_name_or_path './1.3B/' \
@@ -47,7 +40,7 @@ python ./train_t2i.py \
 --data_dir $DATA_DIR \
 --dataloader_num_workers 4 \
 --output_dir $OUTPUT_ROOT \
---log_dir /nas-ssd/adyasha/runs/ \
+--log_dir $LOG_DIR \
 --do_train --do_eval \
 --per_gpu_train_batch_size $TRAIN_BS \
 --per_gpu_eval_batch_size 2 \

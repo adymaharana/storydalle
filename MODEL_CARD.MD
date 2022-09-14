@@ -3,10 +3,9 @@
 StoryDALL-E \[1\] is a model trained for the task of Story Visualization \[2\].
 The model receives a sequence of captions as input and generates a corresponding sequence of images which form a visual story depicting the narrative in the captions. 
 We modify this task to enable the model to receive an initial scene as input, which can be used as a cue for the setting of the story and also for generating unseen or low-resource visual elements. We refer to this task as Story Continuation \[1\].
-StoryDALL-E is based on the [mega-dalle](https://github.com/borisdayma/dalle-mini) model and is adapted from the corresponding [PyTorch codebase](https://github.com/kuprel/min-dalle).
-**This model has been developed for academic purposes only.**
+StoryDALL-E is based on the [dalle](https://github.com/kakaobrain/minDALL-E) model. **This model has been developed for academic purposes only.**
 
-\[[paper]()\]  \[[code]()\] \[[demo]()\]
+\[[paper](https://arxiv.org/abs/2209.06192)\]  \[[code](https://github.com/adymaharana/storydalle/)\] \[[demo]()\]
 
 ### Dataset
 

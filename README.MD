@@ -30,7 +30,7 @@ This repository contains separate folders for training StoryDALL-E based on [min
 #### Training StoryDALL-E based on DALL-E Mega:
 
 1. To finetune the minDALL-E model for story continuation, first migrate to the corresponding folder:\
-```cd story-dalle```<br>
+```cd mega-story-dalle```<br>
 2. Set the environment variables in ```train_story.sh``` to point to the right locations in your system. Specifically, change the ```$DATA_DIR```, ```$OUT_DIR``` and ```$LOG_DIR``` if different from the default locations.
 3. Download the pretrained checkpoint from [here](https://github.com/kakaobrain/minDALL-E)and save it in ```./1.3B```
 4. Run the following command:
