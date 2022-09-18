@@ -11,7 +11,7 @@ PyTorch code for the ECCV 2022 paper "StoryDALL-E: Adapting Pretrained Text-to-I
 ### Training
 
 #### Prepare Repository:
-Download the PororoSV dataset and associated files from [here](https://drive.google.com/file/d/1BqKizOZn4o4dbwNGK7ThCDnNEOVAolnf/view?usp=sharing) and save it as ```./data/pororo/```.<br>
+Download the PororoSV dataset and associated files from [here](https://drive.google.com/file/d/11Io1_BufAayJ1BpdxxV2uJUvCcirbrNc/view?usp=sharing) (updated) and save it as ```./data/pororo/```.<br>
 Download the FlintstonesSV dataset and associated files from [here](https://drive.google.com/file/d/1kG4esNwabJQPWqadSDaugrlF4dRaV33_/view?usp=sharing) and save it as ```./data/flintstones```<br>
 DiDeMoSV dataset is coming soon.
 
