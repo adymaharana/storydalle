@@ -2,7 +2,9 @@
 
 PyTorch code for the ECCV 2022 paper "StoryDALL-E: Adapting Pretrained Text-to-Image Transformers for Story Continuation".
 
-\[[Paper](https://arxiv.org/abs/2209.06192)\] \[[Model Card](https://github.com/adymaharana/storydalle/blob/main/MODEL_CARD.MD)\] \[[Demo](https://github.com/adymaharana/storydalle/blob/main/DEMO.MD)\]
+\[[Paper](https://arxiv.org/abs/2209.06192)\] \[[Model Card](https://github.com/adymaharana/storydalle/blob/main/MODEL_CARD.MD)\] \[[Demo](https://24070.gradio.app/)\](work in progress)
+
+Update: The Demo link is live now, it is a temporary 72-hour link and we will try to make it permanent on HuggingFace Spaces (GPU version).
 
 ![image](./assets/story_dalle_predictions.png)
 
@@ -22,7 +24,7 @@ This repository contains separate folders for training StoryDALL-E based on [min
 1. To finetune the minDALL-E model for story continuation, first migrate to the corresponding folder:\
 ```cd story-dalle```<br>
 2. Set the environment variables in ```train_story.sh``` to point to the right locations in your system. Specifically, change the ```$DATA_DIR```, ```$OUTPUT_ROOT``` and ```$LOG_DIR``` if different from the default locations.
-3. Download the pretrained checkpoint from [here](https://github.com/kakaobrain/minDALL-E)and save it in ```./1.3B```
+3. Download the pretrained checkpoint from [here](https://github.com/kakaobrain/minDALL-E) and save it in ```./1.3B```
 4. Run the following command:
 ```bash train_story.sh <dataset_name>```
 
@@ -32,7 +34,7 @@ This repository contains separate folders for training StoryDALL-E based on [min
 1. To finetune the DALL-E Mega model for story continuation, first migrate to the corresponding folder:\
 ```cd mega-story-dalle```<br>
 2. Set the environment variables in ```train_story.sh``` to point to the right locations in your system. Specifically, change the ```$DATA_DIR```, ```$OUTPUT_ROOT``` and ```$LOG_DIR``` if different from the default locations.
-3. Pretrained checkpoints are automatically downloaded upon initialization
+3. Pretrained checkpoints for generative model and VQGAN detokenizer are automatically downloaded upon initialization. Download the pretrained weights for VQGAN tokenizer from [here](https://heibox.uni-heidelberg.de/d/a7530b09fed84f80a887/) and place it in the same folder as VQGAN detokenizer.
 4. Run the following command:
 ```bash train_story.sh <dataset_name>```
 
