@@ -2,9 +2,9 @@
 
 PyTorch code for the ECCV 2022 paper "StoryDALL-E: Adapting Pretrained Text-to-Image Transformers for Story Continuation".
 
-\[[Paper](https://arxiv.org/abs/2209.06192)\] \[[Model Card](https://github.com/adymaharana/storydalle/blob/main/MODEL_CARD.MD)\] \[[Demo](https://24070.gradio.app/)\](work in progress)
+\[[Paper](https://arxiv.org/abs/2209.06192)\] \[[Model Card](https://github.com/adymaharana/storydalle/blob/main/MODEL_CARD.MD)\] \[[Demo](https://18958.gradio.app)\](work in progress)
 
-Update: The Demo link is live now, it is a temporary 72-hour link and we will try to make it permanent on HuggingFace Spaces (GPU version).
+Update: The Demo link is live now, it is a temporary 72-hour link and will be updated every three day. We are trying to make it permanent on HuggingFace Spaces (GPU version).
 
 ![image](./assets/story_dalle_predictions.png)
 
