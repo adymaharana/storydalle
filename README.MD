@@ -2,9 +2,7 @@
 
 PyTorch code for the ECCV 2022 paper "StoryDALL-E: Adapting Pretrained Text-to-Image Transformers for Story Continuation".
 
-\[[Paper](https://arxiv.org/abs/2209.06192)\] \[[Model Card](https://github.com/adymaharana/storydalle/blob/main/MODEL_CARD.MD)\] \[[Demo](https://18958.gradio.app)\](work in progress)
-
-Update: The Demo link is live now, it is a temporary 72-hour link and will be updated every three day. We are trying to make it permanent on HuggingFace Spaces (GPU version).
+\[[Paper](https://arxiv.org/abs/2209.06192)\] \[[Model Card](https://github.com/adymaharana/storydalle/blob/main/MODEL_CARD.MD)\] \[[Spaces Demo](https://huggingface.co/spaces/ECCV2022/storydalle)\]
 
 ![image](./assets/story_dalle_predictions.png)
 
@@ -15,7 +13,7 @@ Update: The Demo link is live now, it is a temporary 72-hour link and will be up
 #### Prepare Repository:
 Download the PororoSV dataset and associated files from [here](https://drive.google.com/file/d/11Io1_BufAayJ1BpdxxV2uJUvCcirbrNc/view?usp=sharing) (updated) and save it as ```./data/pororo/```.<br>
 Download the FlintstonesSV dataset and associated files from [here](https://drive.google.com/file/d/1kG4esNwabJQPWqadSDaugrlF4dRaV33_/view?usp=sharing) and save it as ```./data/flintstones```<br>
-DiDeMoSV dataset is coming soon.
+Download the DiDeMoSV dataset and associated files from [here](https://drive.google.com/file/d/1zgj_bpE6Woyi-G76axF0nO-yzQaLBayc/view?usp=sharing) and save it as ```./data/didemo```<br>
 
 This repository contains separate folders for training StoryDALL-E based on [minDALL-E](https://github.com/kakaobrain/minDALL-E) and [DALL-E Mega](https://github.com/kuprel/min-dalle) models i.e. the ```./story_dalle/``` and ```./mega-story-dalle``` models respectively.
 
@@ -39,5 +37,7 @@ This repository contains separate folders for training StoryDALL-E based on [min
 ```bash train_story.sh <dataset_name>```
 
 ### Inference
-Links to pretrained checkpoints and inference instructions coming soon!
+Pretrained checkpoints for minDALL-E based StoryDALL-E can be downloaded from here: [PororoSV](https://drive.google.com/file/d/1lJ6zMZ6qTvFu6H35-VEdFlN13MMslivJ/view?usp=sharing)<br>
+
+Links to other pretrained checkpoints and inference instructions coming soon!
 
