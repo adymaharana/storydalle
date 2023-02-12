@@ -2,7 +2,7 @@
 
 PyTorch code for the ECCV 2022 paper "StoryDALL-E: Adapting Pretrained Text-to-Image Transformers for Story Continuation".
 
-\[[Paper](https://arxiv.org/abs/2209.06192)\] \[[Model Card](https://github.com/adymaharana/storydalle/blob/main/MODEL_CARD.MD)\] \[[Spaces Demo](https://huggingface.co/spaces/ECCV2022/storydalle)\]
+\[[Paper](https://arxiv.org/abs/2209.06192)\] \[[Model Card](https://github.com/adymaharana/storydalle/blob/main/MODEL_CARD.MD)\] \[[Spaces Demo](https://huggingface.co/spaces/ECCV2022/storydalle)\] \[[Replicate Demo](https://replicate.com/adymaharana/story-dalle)\]
 
 ![image](./assets/story_dalle_predictions.png)
 
@@ -38,6 +38,8 @@ This repository contains separate folders for training StoryDALL-E based on [min
 
 ### Inference
 Pretrained checkpoints for minDALL-E based StoryDALL-E can be downloaded from here: [PororoSV](https://drive.google.com/file/d/1lJ6zMZ6qTvFu6H35-VEdFlN13MMslivJ/view?usp=sharing)<br>
+
+For a demo of inference using cog, check out [this repo](https://github.com/daanelson/story-dalle-cog). 
 
 Links to other pretrained checkpoints and inference instructions coming soon!
 
