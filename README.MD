@@ -49,7 +49,7 @@ For a demo of inference using cog, check out [this repo](https://github.com/daan
 3Run the following command:
 ```bash infer_story.sh <dataset_name>```
 
-**Memory Requirements for Inference<b>**:
+#### Memory Requirements for Inference:
 
 For double-precision inference, the StoryDALLE model requires nearly 40 GB of space. The memory requirements can be reduced to 20GB by performing mixed precision inference from the autoregressive decoder (included in codebase, see line 1095 in story-dalle/dalle/models/__init_.py). Note that the VQGAN model needs to operate at full precision to retain high-quality of the generated images.
 
