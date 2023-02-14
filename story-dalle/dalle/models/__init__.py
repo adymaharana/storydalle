@@ -835,6 +835,7 @@ class PromptConditionalDalle(Dalle):
                                      pos_prompt=pos_enc_prompt)
 
         codes = codes.view(num_candidates, 16, 16)  # [B, 16, 16]
+
         pixels = torch.clamp(self.stage1.decode_code(codes) * 0.5 + 0.5, 0, 1)  # [B, 256, 256]
         return pixels
 
@@ -976,7 +977,6 @@ class StoryDalle(Dalle):
 
         return model, config_update
 
-
     def init_cross_attention(self, cross_attention_layers, hparams):
         self.cross_attention_idxs = cross_attention_layers
         self.cross_attention_layers = [CrossAttentionLayer(ctx_len=hparams.ctx_len_img + hparams.ctx_len_txt,
@@ -1090,30 +1090,32 @@ class StoryDalle(Dalle):
         with autocast(enabled=False):
             src_codes = self.stage1.get_codes(source).detach()
         src_codes = torch.repeat_interleave(src_codes, self.config.story.story_len, dim=0)
-        print(tokens.shape, src_codes.shape, prompt.shape)
-        if self.config.story.condition:
-            codes = sampling_conditional(self.stage2,
-                                         self.cross_attention_idxs,
-                                         self.cross_attention_layers,
-                                         tokens,
-                                         src_codes,
-                                         top_k=top_k,
-                                         top_p=top_p,
-                                         softmax_temperature=softmax_temperature,
-                                         use_fp16=use_fp16,
-                                         prompt=prompt,
-                                         pos_prompt=pos_enc_prompt)
-        else:
-            codes = sampling(self.stage2,
-                             tokens,
-                             top_k=top_k,
-                             top_p=top_p,
-                             softmax_temperature=softmax_temperature,
-                             use_fp16=use_fp16,
-                             prompt=prompt,
-                             pos_prompt=pos_enc_prompt)
+        # print(tokens.shape, src_codes.shape, prompt.shape)
 
-        codes = codes.view(self.config.story.story_len, 16, 16)  # [B, 16, 16]
+        with autocast(enabled=True):
+            if self.config.story.condition:
+                codes = sampling_conditional(self.stage2,
+                                             self.cross_attention_idxs,
+                                             self.cross_attention_layers,
+                                             tokens,
+                                             src_codes,
+                                             top_k=top_k,
+                                             top_p=top_p,
+                                             softmax_temperature=softmax_temperature,
+                                             use_fp16=use_fp16,
+                                             prompt=prompt,
+                                             pos_prompt=pos_enc_prompt)
+            else:
+                codes = sampling(self.stage2,
+                                 tokens,
+                                 top_k=top_k,
+                                 top_p=top_p,
+                                 softmax_temperature=softmax_temperature,
+                                 use_fp16=use_fp16,
+                                 prompt=prompt,
+                                 pos_prompt=pos_enc_prompt)
+
+            codes = codes.view(self.config.story.story_len, 16, 16)  # [B, 16, 16]
         pixels = torch.clamp(self.stage1.decode_code(codes) * 0.5 + 0.5, 0, 1)  # [B, 256, 256]
         return pixels
 

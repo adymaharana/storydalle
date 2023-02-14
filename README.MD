@@ -41,5 +41,15 @@ Pretrained checkpoints for minDALL-E based StoryDALL-E can be downloaded from he
 
 For a demo of inference using cog, check out [this repo](https://github.com/daanelson/story-dalle-cog). 
 
-Links to other pretrained checkpoints and inference instructions coming soon!
+#### Inferring from StoryDALL-E based on minDALL-E:
+
+1. To infer from the minDALL-E model for story continuation, first migrate to the corresponding folder:\
+```cd story-dalle```<br>
+2. Set the environment variables in ```infer_story.sh``` to point to the right locations in your system. Specifically, change the ```$DATA_DIR```, ```$OUTPUT_ROOT``` and ```$MODEL_CKPT``` if different from the default locations.
+3Run the following command:
+```bash infer_story.sh <dataset_name>```
+
+**Memory Requirements for Inference<b>**:
+For double-precision inference, the StoryDALLE model requires nearly 40 GB of space. The memory requirements can be reduced to 20GB by performing mixed precision inference from the autoregressive decoder (see line 1095 in story-dalle/dalle/models/__init_.py). Note that the VQGAN model needs to operate at full precision to retain high-quality of the generated images.
+
 

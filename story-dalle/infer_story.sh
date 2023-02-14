@@ -1,7 +1,7 @@
 if [ "$1" = "pororo" ]; then
   echo "Evaluating on Pororo"
   DATA_DIR=../data/pororo
-  OUTPUT_ROOT=./out/pororo
+  OUTPUT_ROOT=../out/pororo
   MODEL_CKPT=''
   SENT_EMBED=512
   STORY_LEN=4

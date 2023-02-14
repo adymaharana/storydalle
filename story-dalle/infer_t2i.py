@@ -21,7 +21,7 @@ using a masked language modeling (MLM) loss. XLNet is fine-tuned using a permuta
 
 import logging
 import os, torch
-from dalle.models import PrefixTuningDalle, StoryDalle, PromptDalle
+from dalle.models import StoryDalle, PromptDalle
 import torchvision
 import torchvision.transforms as transforms
 import pytorch_lightning as pl
@@ -33,7 +33,7 @@ import torchvision.utils as vutils
 from torchvision.utils import save_image
 
 console_logger = logging.getLogger(__name__)
-
+torch.set_grad_enabled(False)
 
 def get_dataset(args, tokenizer, preprocess: transforms, mode = 'train'):
     if args.dataset_name == 'mscoco':
@@ -233,7 +233,7 @@ def main(args):
                     # print(pixels.shape)
                     stories.append(pixels)
 
-                save_story_results(stories, texts, args.output_dir, idx, mode=args.mode, dataset='mscoco', video_len=args.story_len, ground_truth=images, source = src_images)
+                save_story_results(stories, texts, args.output_dir, idx, mode=args.mode, dataset=args.dataset_name, video_len=args.story_len, ground_truth=images, source = src_images)
                 torch.save(torch.stack(stories), os.path.join(args.output_dir, 'sdalle_story_%s_batch_%s.pt' % (args.mode, idx)))
             elif args.tuning_mode == 'prompt':
                 stories = []
@@ -248,7 +248,7 @@ def main(args):
                     # print(pixels.shape)
                     stories.append(pixels)
 
-                save_story_results(stories, texts, args.output_dir, idx, mode=args.mode, dataset='mscoco', video_len=args.story_len, ground_truth=images, source = src_images)
+                save_story_results(stories, texts, args.output_dir, idx, mode=args.mode, dataset=args.dataset_name, video_len=args.story_len, ground_truth=images, source = src_images)
                 torch.save(torch.stack(stories), os.path.join(args.output_dir, 'sdalle_story_%s_batch_%s.pt' % (args.mode, idx)))
             else:
                 # imgs, prompts = batch
